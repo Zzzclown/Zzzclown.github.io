@@ -95,7 +95,6 @@
       
         <p>1.环境搭建：</p>
 <p> 下载 Node.js 和 Git 程序并安装，一路点 “下一步” 按默认配置完成安装。安装完成后，Win+R 输入 cmd 并打开，依次输入 node -v、npm -v 和 git –version 并回车，如下图出现程序版本号即可。</p>
-<p> <img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps1.jpg" alt="img"></p>
 <ol start="2">
 <li>连接 Github</li>
 </ol>
@@ -103,18 +102,14 @@
 <p>右键 -&gt; Git Bash Here，设置用户名和邮箱：</p>
 <p>git config –global user.name “GitHub 用户名”</p>
 <p>git config –global user.email “GitHub 邮箱”</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps2.jpg" alt="img"> </p>
 <p>创建 SSH 密匙：</p>
 <p>输入 ssh-keygen -t rsa -C “GitHub 邮箱”，然后一路回车。</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps3.jpg" alt="img"> </p>
 <p>添加密匙：</p>
 <p>·进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。</p>
 <p>·登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。</p>
 <p>·Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps4.jpg" alt="img"> </p>
 <p>验证连接：</p>
-<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a> 出现 “Are you sure……”，输入 yes 回车确认。显示 “Hi xxx! You’ve successfully……” 即连接成功。</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps5.jpg" alt="img"> </p>
+<p>打开 Git Bash，输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> 出现 “Are you sure……”，输入 yes 回车确认。显示 “Hi xxx! You’ve successfully……” 即连接成功。</p>
 <ol start="3">
 <li>创建 Github Pages 仓库</li>
 </ol>
@@ -123,7 +118,6 @@
 <p>·勾选 “Add a README file”</p>
 <p>·Description 选填</p>
 <p>填好后点击 Create repository 创建。</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps6.jpg" alt="img"> </p>
 <p>创建后默认自动启用 HTTPS，博客地址为：https:&#x2F;&#x2F;用户名.github.io</p>
 <ol start="4">
 <li>本地安装 Hexo 博客程序</li>
@@ -131,37 +125,29 @@
 <p>新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。</p>
 <p># 4.1 安装 Hexo</p>
 <p>使用 npm 一键安装 Hexo 博客程序：</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps7.jpg" alt="img"> </p>
 <p># 4.2 Hexo 初始化和本地预览</p>
 <p>初始化并安装所需组件：</p>
 <p>hexo init    # 初始化</p>
 <p>npm install   # 安装组件</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps8.jpg" alt="img"> </p>
 <p>完成后依次输入下面命令，启动本地服务器进行预览：</p>
 <p>hexo g  # 生成页面</p>
 <p>hexo s  # 启动预览</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps9.jpg" alt="img"> </p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps10.jpg" alt="img"> </p>
 <p>访问 <a href="http://localhost:4000，发现页面加载不出来，可能是端口被占用了。Ctrl+C">http://localhost:4000，发现页面加载不出来，可能是端口被占用了。Ctrl+C</a> 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p>
 <p>出现 Hexo 默认页面，本地博客安装成功！</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps11.jpg" alt="img"> </p>
 <ol start="5">
 <li>部署 Hexo 到 GitHub Pages</li>
 </ol>
 <p>本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p>
 <p>首先安装 hexo-deployer-git：</p>
 <p>npm install hexo-deployer-git –save</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps12.jpg" alt="img"> </p>
 <p>然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下：</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps13.jpg" alt="img"> </p>
 <p>完成后运行 hexo d 将网站上传部署到 GitHub Pages。</p>
 <p>完成！这时访问我们的 GitHub 域名 <a target="_blank" rel="noopener" href="https://zzzclown.github.io/">https://Zzzclown.github.io</a> 就可以看到 Hexo 网站了。</p>
-<p><img src="file:///C:\Users\clown\AppData\Local\Temp\ksohtml5344\wps14.jpg" alt="img"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clfjkvpjh0001mcwgdkkof808" data-title="Github&amp;Hexo搭建个人博客" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clfjl262l0001q0wg6q3wctn5" data-title="Github&amp;Hexo搭建个人博客" class="article-share-link">Share</a>
       
       
       
@@ -212,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/14/hello-world/" data-id="clfjkvpjd0000mcwgc7l2atbu" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/14/hello-world/" data-id="clfjl26280000q0wg4n7g4ra8" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
