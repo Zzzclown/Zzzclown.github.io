@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zzzclown.github.io/sitemap.xml
