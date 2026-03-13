@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="aJxGs9fEwtt4He0k0IupXvmGhLraxD6otsMEVaZyYRE">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zzzclown.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Xcode | Apple Developer DocumentationXcodeBuild, test, and submit your app with Apple’s integrated development environment.On This PageOverviewTopicsOverviewXcode consists of a suite of tools that dev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xcode | Apple Developer Documentation">
+<meta property="og:url" content="https://zzzclown.github.io/2026/03/12/13.xcode-apple-developer-documentation/index.html">
+<meta property="og:site_name" content="Zzzclown 的小窝">
+<meta property="og:description" content="Xcode | Apple Developer DocumentationXcodeBuild, test, and submit your app with Apple’s integrated development environment.On This PageOverviewTopicsOverviewXcode consists of a suite of tools that dev">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-03-12T08:30:00.000Z">
+<meta property="article:modified_time" content="2026-03-13T07:12:49.398Z">
+<meta property="article:author" content="Zzzclown">
+<meta property="article:tag" content="Ecommerce">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zzzclown.github.io/2026/03/12/13.xcode-apple-developer-documentation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Xcode | Apple Developer Documentation | Zzzclown 的小窝</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Zzzclown 的小窝</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活与技术的地方</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://zzzclown.github.io/2026/03/12/13.xcode-apple-developer-documentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jjy.jpg">
+      <meta itemprop="name" content="Zzzclown">
+      <meta itemprop="description" content="一个分享日常、技术学习、与成长思考的个人博客。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zzzclown 的小窝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Xcode | Apple Developer Documentation
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2026-03-12 16:30:00" itemprop="dateCreated datePublished" datetime="2026-03-12T16:30:00+08:00">2026-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-03-13 15:12:49" itemprop="dateModified" datetime="2026-03-13T15:12:49+08:00">2026-03-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Xcode | Apple Developer Documentation<br>Xcode<br>Build, test, and submit your app with Apple’s integrated development environment.<br>On This Page<br>Overview<br>Topics<br>Overview<br>Xcode consists of a suite of tools that developers use to build apps for Apple platforms. Use Xcode to manage your entire development workflow — from creating your app to testing, optimizing, and submitting it to the App Store.<br>Xcode can launch its development tools, or you can launch them independently from the Xcode &gt; Open Developer Tool menu:<br>Use Simulator for rapid prototyping and testing your app in a simulated environment when a real device isn’t available. Simulator provides environments for iPhone, iPad, Apple Watch, and Apple TV devices with different settings, files, and operating system versions. For more information, see Simulator Help.<br>Use Instruments to profile and analyze your app, improve performance, and find memory problems. Instruments collects data and presents the results using different tools called instruments. For more information, see Instruments Help.<br>Use Create ML to create and train custom machine learning models for your app. See Create ML for more information.<br>Use Reality Composer to construct 3D compositions and augmented reality (AR) experiences. See Creating 3D Content with Reality Composer for more information.<br>Note<br>Download the latest version of Xcode from the Mac App Store. Download beta versions of Xcode from the Apple Developer website.<br>Topics<br>Xcode IDE<br>Projects and Workspaces<br>Manage the code and resources you use to build apps, libraries, and other software for Apple platforms.<br>Capabilities<br>Enable services provided by Apple such as in-app purchase, push notifications, Apple Pay, CloudKit, and many others.<br>Code<br>Porting Your mac OS Apps to Apple Silicon<br>Create a version of your macOS app that runs on both Apple silicon and Intel-based Mac computers.<br>Finding and Refactoring Code<br>Search your code for text, patterns, and symbols that you can refactor quickly and easily.<br>Fixing Issues in Your Code as You Type<br>Minimize typing-related errors using code completion, and let Xcode fix common mistakes for you.<br>Build System<br>Compile your code into a binary format, and customize your project settings to build your code.<br>Application Binary Interfaces<br>Write assembly instructions that adhere to the application binary interfaces of Apple platforms.<br>Source Control Management<br>Back up your files, collaborate with others, and tag your releases with source control support in Xcode.<br>Interface<br>Asset Management<br>Add images, strings, data files, and other resources to your projects, and manage how you load them at runtime.<br>Creating Your App’s Interface with Swift UI<br>Develop apps in SwiftUI with an interactive preview that keeps the code and layout in sync.<br>Localization<br>Localization<br>Expand the market for your app by supporting multiple languages and regions.<br>Autosizing Views for Localization in i OS<br>Add auto layout constraints to your app to achieve localizable views.<br>Localization-Friendly Layouts in mac OS<br>This project demonstrates localization-friendly auto layout constraints. It uses NSGrid View as a container view to achieve localized layouts.<br>Project Configuration<br>Building a Universal mac OS Binary<br>Create macOS apps and other executables that run natively on both Apple silicon and Intel-based Mac computers.<br>Adding Package Dependencies to Your App<br>Integrate package dependencies to share code between projects, or leverage code from other developers.<br>Creating a Mac Version of Your i Pad App<br>Bring your iPad app to macOS with Mac Catalyst.<br>Embedding a Command-Line Tool in a Sandboxed App<br>Add a command-line tool to a sandboxed app’s Xcode project so the resulting app can run it as a helper tool.<br>Embedding Nonstandard Code Structures in a Bundle<br>Use code that’s structured in a nonstandard way while avoiding code signing and distribution problems.<br>Debugging<br>Running Your App in the Simulator or on a Device<br>Launch your app in a simulated iOS, tvOS, or watchOS device, or on a device connected to your Mac.<br>Diagnosing and Resolving Bugs in Your Running App<br>Inspect your running app to isolate bugs, locate crashes, identify excess system resource usage, visualize memory bugs, and investigate view layout problems.<br>Setting Breakpoints to Pause Your Running App<br>Specify where your app pauses when running the debugger to investigate bugs.<br>Stepping Through Code and Inspecting Variables to Isolate Bugs<br>Find the cause of your bugs by watching variables change as you step through your source code in the debugger.<br>Building Your App to Include Debugging Information<br>Configure Xcode to produce the symbol information for debugging and crash reports.<br>Analyzing HTTP Traffic with Instruments<br>Measure HTTP-based network performance and usage of your apps.<br>Diagnosing Issues with Entitlements<br>Verify your app’s entitlements at every stage of development to track down errors during distribution.<br>Diagnosing Memory, Thread, and Crash Issues Early<br>Identify runtime crashes and undefined behaviors in your app during testing using Xcode’s sanitizer tools.<br>Diagnosing Issues Using Crash Reports and Device Logs<br>Use crash reports and device logs to debug app issues.<br>Testing<br>Testing Your Apps in Xcode<br>Detect logic failures, UI problems, and performance regressions with XCTest.<br>Adding Unit Tests to Your Existing Project<br>Remove coupling between components to increase test coverage and reliability.<br>Setting Up Store Kit Testing in Xcode<br>Set up your test environment to test in-app purchases with data you configure locally.<br>Continuous Integration and Delivery<br>Xcode Cloud<br>Automatically build, test, and distribute your apps with Xcode Cloud to verify changes and create high-quality apps.<br>Distribution<br>Preparing Your App for Distribution<br>Configure the information property list and add icons before you distribute your app.<br>Notarizing mac OS Software Before Distribution<br>Give users even more confidence in your macOS software by submitting it to Apple for notarization.<br>Distributing Your App for Beta Testing and Releases<br>Release your app to beta testers and users.<br>Distributing Your App to Registered Devices<br>Register devices in your developer account and deploy your app to them for testing.<br>Using the Latest Code Signature Format<br>Update legacy app code signatures so your app runs on current OS releases.<br>Testing a Release Build<br>Run your app in simulated user environments to discover and identify deployment errors.<br>Testing a Beta OS<br>Manage unintended differences in your app by testing beta operating-system (OS) releases.<br>Signing a Daemon with a Restricted Entitlement<br>Wrap a daemon in an app-like structure to use an entitlement thatʼs authorized by a provisioning profile.<br>Documentation<br>Sloth Creator: Building Doc C Documentation in Xcode<br>Build DocC documentation for a Swift package that contains a DocC Catalog.<br>Documenting a Swift App, Framework, or Package<br>Create developer documentation from in-source comments, add articles with code snippets, and add tutorials for a guided learning experience.<br>Writing Symbol Documentation in Your Source Files<br>Add reference documentation to your symbols that explains how to use them.<br>Adding Structure to Your Documentation Pages<br>Make symbols easier to find by arranging them into groups and collections.<br>Adding Supplemental Content to a Documentation Catalog<br>Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.<br>Formatting Your Documentation Content<br>Enhance your content’s presentation with special formatting and styling for text, links, and other page elements.<br>Distributing Documentation to External Developers<br>Share your documentation directly with Xcode users or host it on a web server.<br>Code Sharing<br>Swift Packages<br>Create reusable code, organize it in a lightweight way, and share it across Xcode projects and with other developers.<br>Performance<br>Improving Your App’s Performance<br>Model, measure, and boost the performance of your app by using a con</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Ecommerce/" rel="tag"># Ecommerce</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/03/12/13.xcode-alternatives-25-similar-ides-alternativeto/" rel="prev" title="Xcode Alternatives: 25+ Similar IDEs | AlternativeTo">
+      <i class="fa fa-chevron-left"></i> Xcode Alternatives: 25+ Similar IDEs | AlternativeTo
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/03/12/13.tools-for-ios-development/" rel="next" title="Tools for iOS Development">
+      Tools for iOS Development <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zzzclown"
+      src="/images/jjy.jpg">
+  <p class="site-author-name" itemprop="name">Zzzclown</p>
+  <div class="site-description" itemprop="description">一个分享日常、技术学习、与成长思考的个人博客。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zzzclown</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
